@@ -13,12 +13,14 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
+    
     private FirebaseAuth firebaseAuth ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //instancia para o ponto de referencia
         firebaseAuth = FirebaseAuth.getInstance();
 
         //deslogar usuario
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         /**
         //Login
-        firebaseAuth.signInWithEmailAndPassword("flaviopw3@gmail.com","Mafiaazul151")
+        firebaseAuth.signInWithEmailAndPassword("flaviopw3@gmail.com","EngenhariaUemg")
                 .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 **/
         /**
         //cadsatro
-        firebaseAuth.createUserWithEmailAndPassword("flaviopw3@gmail.com", "Mafiaazul151")
+        firebaseAuth.createUserWithEmailAndPassword("flaviopw3@gmail.com", "EngenhariaUemg")
                 .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
